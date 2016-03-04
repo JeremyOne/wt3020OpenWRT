@@ -1,6 +1,6 @@
-# Instructions for installing OpenWRT and TOR on the wt3020 NexxRouter
+# Instructions for installing OpenWRT and TOR on the wt3020 (Nexx) router
 
-These instructions assume you have a stock WT320, if not you may want to preform a hard-reset.
+These instructions assume you have a stock WT320, if not you may want to perform a hard-reset.
 
 ## Step one - Find latest OpenWRT binary
 
@@ -8,12 +8,12 @@ First you'll need the latest binary for OpenWRT, as of 03-03-2016 it is:
 https://downloads.openwrt.org/chaos_calmer/15.05/ramips/mt7620/openwrt-15.05-ramips-mt7620-wt3020-8M-squashfs-factory.bin  
 -Replace 15.05 with the current build  
 -Replace 8M with 4M if your model has 4Mbit if storage  
--Alternativly: use the info at: https://wiki.openwrt.org/toh/nexx/wt3020  
+-Alternatively: use the info at: https://wiki.openwrt.org/toh/nexx/wt3020  
 
 ## Ethernet Setup
 
-Connect LAN ethernet to your computer  
-Connect WAN ethernet to some sort of internet  
+Connect LAN Ethernet to your computer  
+Connect WAN Ethernet to some sort of internet  
 
 ## Update Firmware:
 
@@ -36,7 +36,7 @@ wget https://downloads.openwrt.org/chaos_calmer/15.05/ramips/mt7620/openwrt-15.0
 wtd_write -r write openwrt-15.05-ramips-mt7620-wt3020-8M-squashfs-sysupgrade.bin mtd3
 ```
 
-Note: I was disconnected from telnet after a minte or so, LED blinked for another minute, then computer ethernet DHCP'ed to 192.168.1.1  
+Note: I was disconnected from telnet after a minute or so, LED blinked for another minute, then computer Ethernet DHCP'ed to 192.168.1.1  
 If you're still able to connect to 192.168.8.1, something went wrong
 
 ## Set password and SSH access
@@ -48,6 +48,8 @@ Go to System > Administration to setup password and SSH
 (You can also do this from SSH)  
 
 ## Install TOR (if you want)
+
+This will make your router a dedicated and transparent TOR router, all traffic will exit through TOR.
 
 Connect to SSH and run: 
 ```
