@@ -29,7 +29,7 @@ After login, you should see somthing like:
 BusyBox v1.12.1 (2015-02-05 18:04:51 HKT) built-in shell (ash)
 ```
 
-Run commands:
+Download and write firmware to flash:
 ```
 cd /tmp
 wget https://downloads.openwrt.org/chaos_calmer/15.05/ramips/mt7620/openwrt-15.05-ramips-mt7620-wt3020-8M-squashfs-factory.bin
@@ -58,14 +58,19 @@ Confirm by connecting to the OnionWRT wifi, then visiting https://check.torproje
 Note: not much changes in the OpenWRT web GUI, tor config can be done from SSH  
 If you want to reset to stock OpenWRT, the reset button on the router still works and will delete all configs  
 
-## More OpenWRT info at: 
+## Updating OpenWRT
+
+Updating is a semi-manual process by downloading a new binary manually and updating locally.  
+Specific instructions at: https://wiki.openwrt.org/doc/howto/generic.sysupgrade
+
+## More OpenWRT info at
 
 Basic Config: https://wiki.openwrt.org/doc/howto/basic.config  
 Share USB storage: https://wiki.openwrt.org/doc/recipes/usb-storage-samba-webinterface  
 Upgrading: https://wiki.openwrt.org/doc/howto/generic.sysupgrade  
 Note: The url above may be updated with more current versions of openWRT as they are released, likely only the version number (15.05) will be changed  
 
-## Source Links:
+## Source Links
 
 https://wiki.openwrt.org/toh/nexx/wt3020
 http://www.securityskeptic.com/2016/01/how-to-turn-a-nexx-wt3020-router-into-a-tor-router.html  
