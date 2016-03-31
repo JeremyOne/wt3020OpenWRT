@@ -35,6 +35,7 @@ cd /tmp
 wget https://downloads.openwrt.org/chaos_calmer/15.05/ramips/mt7620/openwrt-15.05-ramips-mt7620-wt3020-8M-squashfs-factory.bin
 wtd_write -r write openwrt-15.05-ramips-mt7620-wt3020-8M-squashfs-sysupgrade.bin mtd3
 ```
+If you are running an older version of the wt3020 firmware wget will not support HTTPS, and the wtd_write command will not not be avilable. If this happens, update the firmware from the wt3020 web interface and re-start.
 
 Note: I was disconnected from telnet after a minute or so, LED blinked for another minute, then computer Ethernet DHCP'ed to 192.168.1.1  
 If you're still able to connect to 192.168.8.1, something went wrong
@@ -74,7 +75,8 @@ Note: The url above may be updated with more current versions of openWRT as they
 
 ## Source Links
 
-https://wiki.openwrt.org/toh/nexx/wt3020  
-http://www.securityskeptic.com/2016/01/how-to-turn-a-nexx-wt3020-router-into-a-tor-router.html  
+More about openWrt: https://wiki.openwrt.org/toh/nexx/wt3020  
+Notes on similar http://www.securityskeptic.com/2016/01/how-to-turn-a-nexx-wt3020-router-into-a-tor-router.html  
 https://commotionwireless.net/blog/2014/09/15/transparent-tor-gateway-on-openwrt/  
-https://trac.torproject.org/projects/tor/wiki/doc/OpenWRT  
+More about TOR on OpenWrt: https://trac.torproject.org/projects/tor/wiki/doc/OpenWRT 
+Stock firmware images: http://www.nexx.com.cn/index.php/home/page?p=222
