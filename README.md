@@ -18,6 +18,7 @@ https://downloads.openwrt.org/chaos_calmer/15.05/ramips/mt7620/openwrt-15.05-ram
 ## Step 02: Ethernet Setup
 
 Connect LAN Ethernet to your computer, or any network without DHCP
+
 Connect WAN Ethernet to some sort of internet, a LAN with DHCP is fine
 
 ## Step 03: Replace stock firmware with OpenWrt
