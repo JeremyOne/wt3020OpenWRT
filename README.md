@@ -2,12 +2,12 @@
 
 These instructions assume you have a stock WT320, if not you may want to perform a hard-reset.
 
-## Step zero - Update your device
+## Step 00: Update your device
 Before you start, you need to be on a version of the stock firmware that supports https requests with wget, and also have access to the wtd_write command. Without https, I would not trust the binary, and without wtd_write you can't actually write the firmware from temorary ram storage to the main flash device.
 
 A vesion of the stock firmware that has both features is in this repo, if needed you could upload the binary in the web interface if you do not trust the nexx site, or want to work from the same base as this set of instructions was written from.
 
-## Step one - Find latest OpenWRT binary
+## Step 01: Find latest OpenWRT binary
 
 You'll need the latest binary for OpenWRT, as of 03-03-2016 it is:  
 https://downloads.openwrt.org/chaos_calmer/15.05/ramips/mt7620/openwrt-15.05-ramips-mt7620-wt3020-8M-squashfs-factory.bin  
@@ -15,12 +15,12 @@ https://downloads.openwrt.org/chaos_calmer/15.05/ramips/mt7620/openwrt-15.05-ram
 -Replace 8M with 4M if your model has 4Mbit if storage  
 -Alternatively: use the info at: https://wiki.openwrt.org/toh/nexx/wt3020  
 
-## Ethernet Setup
+## Step 02: Ethernet Setup
 
 Connect LAN Ethernet to your computer  
 Connect WAN Ethernet to some sort of internet  
 
-## Update Firmware:
+## Step 03: Replace firmware with OpenWrt
 
 ```
 telnet 192.168.8.1
@@ -45,7 +45,7 @@ If you are running an older version of the wt3020 firmware wget will not support
 Note: I was disconnected from telnet after a minute or so, LED blinked for another minute, then computer Ethernet DHCP'ed to 192.168.1.1  
 If you're still able to connect to 192.168.8.1, something went wrong
 
-## Set password and SSH access
+## Step 04: Set password and SSH access
 
 Connect to: http://192.168.1.1  
 user: root  
@@ -53,7 +53,7 @@ pass: (blank)
 Go to System > Administration to setup password and SSH  
 (You can also do this from SSH)  
 
-## Install TOR (if you want)
+## Step 05: Install TOR (optional)
 
 This will make your router a dedicated and transparent TOR router, all traffic will exit through TOR.
 
@@ -66,19 +66,19 @@ Confirm by connecting to the OnionWRT wifi, then visiting https://check.torproje
 Note: not much changes in the OpenWRT web GUI, tor config can be done from SSH  
 If you want to reset to stock OpenWRT, the reset button on the router still works and will delete all configs  
 
-## Updating OpenWRT
+## Notes: Updating OpenWRT
 
 Updating is a semi-manual process by downloading a new binary manually and updating locally.  
 Specific instructions at: https://wiki.openwrt.org/doc/howto/generic.sysupgrade
 
-## More OpenWRT info at
+## Notes: More OpenWRT info at
 
 Basic Config: https://wiki.openwrt.org/doc/howto/basic.config  
 Share USB storage: https://wiki.openwrt.org/doc/recipes/usb-storage-samba-webinterface  
 Upgrading: https://wiki.openwrt.org/doc/howto/generic.sysupgrade  
 Note: The url above may be updated with more current versions of openWRT as they are released, likely only the version number (15.05) will be changed  
 
-## Source Links
+## Notes: Source Links
 
 More about openWrt: https://wiki.openwrt.org/toh/nexx/wt3020  
 Notes on similar http://www.securityskeptic.com/2016/01/how-to-turn-a-nexx-wt3020-router-into-a-tor-router.html  
