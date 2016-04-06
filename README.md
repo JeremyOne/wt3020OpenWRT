@@ -3,9 +3,13 @@
 These instructions assume you have a stock WT320, if not you may want to perform a hard-reset.
 
 ## Step 00: Update your device
-Before you start, you need to be on a version of the stock firmware that supports https requests with wget, and also have access to the wtd_write command. Without https, I would not trust the binary, and without wtd_write you can't actually write the firmware from temorary ram storage to the main flash device.
+Before you start, you need to be on a version of the stock firmware that supports https requests with wget, and also has access to the wtd_write command. 
 
-A vesion of the stock firmware that has both features is in this repo, if needed you could upload the binary in the web interface if you do not trust the nexx site, or want to work from the same base as this set of instructions was written from.
+First option: login to the web admin portal for the router and update the firmare.
+
+Second choice: download the stock nexx firmware from this repo and upload it in the same web admin portal for the router.
+
+Third choice, download the latest binary from: http://www.nexx.com.cn/index.php/home/page?p=222, and upload it using the same web admin portal for the router.
 
 ## Step 01: Find latest OpenWRT binary
 
