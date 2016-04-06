@@ -2,9 +2,14 @@
 
 These instructions assume you have a stock WT320, if not you may want to perform a hard-reset.
 
+## Step zero - Update your device
+Before you start, you need to be on a version of the stock firmware that supports https requests with wget, and also have access to the wtd_write command. Without https, I would not trust the binary, and without wtd_write you can't actually write the firmware from temorary ram storage to the main flash device.
+
+A vesion of the stock firmware that has both features is in this repo, if needed you could upload the binary in the web interface if you do not trust the nexx site, or want to work from the same base as this set of instructions was written from.
+
 ## Step one - Find latest OpenWRT binary
 
-First you'll need the latest binary for OpenWRT, as of 03-03-2016 it is:  
+You'll need the latest binary for OpenWRT, as of 03-03-2016 it is:  
 https://downloads.openwrt.org/chaos_calmer/15.05/ramips/mt7620/openwrt-15.05-ramips-mt7620-wt3020-8M-squashfs-factory.bin  
 -Replace 15.05 with the current build  
 -Replace 8M with 4M if your model has 4Mbit if storage  
