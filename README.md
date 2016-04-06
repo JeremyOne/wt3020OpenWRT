@@ -17,16 +17,17 @@ https://downloads.openwrt.org/chaos_calmer/15.05/ramips/mt7620/openwrt-15.05-ram
 
 ## Step 02: Ethernet Setup
 
-Connect LAN Ethernet to your computer  
-Connect WAN Ethernet to some sort of internet  
+Connect LAN Ethernet to your computer, or any network without DHCP
+Connect WAN Ethernet to some sort of internet, a LAN with DHCP is fine
 
-## Step 03: Replace firmware with OpenWrt
+## Step 03: Replace stock firmware with OpenWrt
 
 ```
 telnet 192.168.8.1
 User: nexxadmin
 Password: y1n2inc.com0755
 ```
+Note: the password appears to be a string of the developers(?) domain, + unix permission 0755, not a very good password.
 
 After login, you should see somthing like: 
 
@@ -40,10 +41,11 @@ cd /tmp
 wget https://downloads.openwrt.org/chaos_calmer/15.05/ramips/mt7620/openwrt-15.05-ramips-mt7620-wt3020-8M-squashfs-factory.bin
 wtd_write -r write openwrt-15.05-ramips-mt7620-wt3020-8M-squashfs-sysupgrade.bin mtd3
 ```
-If you are running an older version of the wt3020 firmware wget will not support HTTPS, and the wtd_write command will not not be avilable. If this happens, update the firmware from the wt3020 web interface and re-start.
+If you are running an older version of the wt3020 firmware wget will not support HTTPS and give you an error. Also, the wtd_write command will not not be avilable. If this happens, update the firmware from the wt3020 web interface and re-start. (See step 00)
 
-Note: I was disconnected from telnet after a minute or so, LED blinked for another minute, then computer Ethernet DHCP'ed to 192.168.1.1  
-If you're still able to connect to 192.168.8.1, something went wrong
+Note: After succesful download and write, I was disconnected from telnet after a minute or so, LED blinked for another minute or so, then computer ethernet DHCP'ed to 192.168.1.1.
+
+If you're still able to connect to 192.168.8.1, something went wrong! Verify that flashing was successful, or retry flash with the binary attached to this repo.
 
 ## Step 04: Set password and SSH access
 
